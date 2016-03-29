@@ -1,4 +1,4 @@
-//libreria de nuestra pila bebe :3
+//libreria de nuestra pila
 #include <string.h>
 int i=0;
 typedef struct elemento
