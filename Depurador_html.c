@@ -1,4 +1,4 @@
-/*Main*/
+/*Main para empezar el programa*/
 #include <stdio.h>
 #include <stdlib.h>
 #include "pila.h"
