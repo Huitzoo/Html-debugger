@@ -1,0 +1,6 @@
+Lista de errores:
+
+Error 1: Ha habido un error en la pila, consulte la libreria pila.h o bien no se ha encontrado su archivo
+Error 2: Ha sobre pasado el limite de caracteres de una etiqueta la etiqueta mas grande tiene 10 caracteres + 1
+Error 3: No se encontró el cierre de su etiqueta
+Error 4: NO se encontró la etiqueta pareja ejemplo <body> no se encontró </body>
