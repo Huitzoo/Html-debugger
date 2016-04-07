@@ -1,19 +1,19 @@
 //libreria de nuestra pila
 #include <string.h>
 int i=0;
-typedef struct elemento
+struct elemento
 {
 	char *dato;
-	struct elemento *siguiente;	
-}elemento;
+	struct elemento *siguiente;
+};
 
-typedef struct pila
+struct pila
 {
 	int longitud;
 	struct elemento *inicio;
-}pila;
+};
 
-void start(pila * aux)
+void start(struct pila * aux)
 {
 	aux->inicio = NULL;
 	aux->longitud = 0;
@@ -25,30 +25,27 @@ void inicializar(char arreglo[], int x)
 		arreglo[i]=' ';
 	}
 }
-int push(pila *aux, char *dato)
+int push(struct pila *aux, char *dato)
 {
-	elemento *nuevo_elemento;
-	if((nuevo_elemento = (elemento *) malloc (sizeof (elemento))) == NULL)
+	struct elemento *nuevo_elemento;
+	if((nuevo_elemento = (struct elemento *) malloc (sizeof (struct elemento))) == NULL)
 		return 1;
 	
 	if((nuevo_elemento->dato = (char *) malloc (50 * sizeof (char))) == NULL)
 		return 1;
-
-	/*printf("Yo soy de pila ");
-	for (i = 0; i < 12; i++)
-	{
-		printf("%c", dato[i]);
-	}*/
 	strcpy(nuevo_elemento->dato, dato);
 	(nuevo_elemento->siguiente) = (aux ->inicio);
 	(aux->inicio) = nuevo_elemento;
 	aux->longitud++;
 }
 
-int pop(pila *aux)
+int pop(struct pila *aux)
 {
 	
-	elemento *sup_elemento;
+	struct elemento *sup_elemento;
+	if((sup_elemento = (struct elemento *) malloc (sizeof (struct elemento))) == NULL)
+		return 1;
+
 	if(aux->longitud==0)
 	{
 		return 1;
@@ -64,9 +61,9 @@ int pop(pila *aux)
 	return 0;
 }
 
-char* top(pila * aux)
+char* top(struct pila *aux)
 {
-	elemento *actual;
+	struct elemento *actual = (struct elemento *)malloc(sizeof (struct elemento));
 	char *palabra_pila = (char *)malloc(12*sizeof(char));
 	actual = aux->inicio;
 	strcpy(palabra_pila,actual->dato);
