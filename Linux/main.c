@@ -19,7 +19,7 @@ int main(int argc, char **argv)
 		printf("Error 1\nChecar Leeme.txt\n");
 		return 0;
 	}
-	//parte donde se hacen las cosas
+	/*parte donde se hacen las cosas*/
 	else
 	{
 		caracter = fgetc(ar); //obtiene el primer caracter
