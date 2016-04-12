@@ -1,0 +1,46 @@
+Html-debugger, version 1.2.0 free.
+Fecha: 31/03/2016
+==========================================================
+Uso General
+
+- Programado en la plataforma Ubuntu 15.04
+
+- Programa para revisar y detectar la falta de cierre de etiquetas en archivos
+  html.
+
+- Usa dos pilas, en una guarda la llamada de etiqueta "<" y en la otra guarda  
+  el nombre de la etiqueta "body"
+
+- Si falta el cierre ">" o falta "/body" manda un error.
+
+- Este programa contiene una lista de errores donde puede consultar el error  
+  que el programa le arroja
+
+==============================================================
+Requerimientos del sistema: 
+
+- Principalmente debe de ser compilado en Linux, aunque también puede intentar
+  compilarlo en windows 10/8/7 bajo su responsabilidad
+
+==============================================================
+
+Información del contacto:
+
+Nombre: Chavez Barrera Oscar Huitzilin
+GitHub: https://github.com/Huitzoo
+Email: huitzi_lin@live.com
+
+Nombre: Henandez Martinez David
+GitHub: https://github.com/Davestring
+Email: Davestring@outlook.com
+
+
+==============================================================
+Errores
+
+Lista de errores:
+
+Error 1: Ha habido un problema en la lectura de la pila o documento
+Error 2: Ha sobre pasado el limite de caracteres de una etiqueta la etiqueta mas grande tiene 10 caracteres + 1
+Error 3: No se encontró el cierre de su etiqueta <#>
+Error 4: NO se encontró la etiqueta pareja ejemplo <body> no se encontró </body>
