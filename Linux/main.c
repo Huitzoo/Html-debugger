@@ -5,6 +5,11 @@ char validar_etiqueta(char x, FILE *ar, char *signo, struct pila *l_signo, struc
 int checar_etiqueta(char palabra[], int x);
 int main(int argc, char **argv)
 {
+	if (argc<1)
+	{
+		printf("Faltan parametros\n");
+		exit(0);
+	}
 	char *signo = (char *)malloc(1*sizeof(char));
 	struct pila *l_signo = (struct pila *)malloc(12*sizeof(struct pila));
 	struct pila *l_etiquetas = (struct pila *)malloc(12*sizeof(struct pila));
@@ -13,7 +18,7 @@ int main(int argc, char **argv)
 	start(l_signo);
 	start(l_etiquetas);
 	printf("\t\tDepurador html.\n\n\t**Recuerda que tus etiquetas \n\tcomo recomendacion deben estar en minusculas**\n\n");
-	ar = fopen("test2.html","r");
+	ar = fopen(argv[1],"r");
 	if(ar==NULL)
 	{
 		printf("Error 1\nChecar Leeme.txt\n");
@@ -44,16 +49,10 @@ int main(int argc, char **argv)
 
 			}
 	  	}while(caracter=='<');
-	  		caracter = fgetc(ar);	
+	  		caracter = fgetc(ar);
 	  	}
 	}
 	fclose(ar);
 	printf("SU archivo html esta correcto\n\n");
 	return 0;
 }
-
-
-
-
-
-
