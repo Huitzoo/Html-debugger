@@ -5,7 +5,7 @@ char validar_etiqueta(char x, FILE *ar, char *signo, struct pila *l_signo, struc
 int checar_etiqueta(char palabra[], int x);
 int main(int argc, char **argv)
 {
-	if (argc<1)
+	if (argc<2)
 	{
 		printf("Faltan parametros\n");
 		exit(0);
